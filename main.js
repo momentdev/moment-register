@@ -65,13 +65,6 @@ client.login(config.token).then(c => console.log(`Logged in as ${client.user.tag
 
 // ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬KAYIT KISMI▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
-client.on('interactionCreate', async(interaction) => {
-  if(interaction.isButton()) {
-
-    if(interaction.customId === 'iptal') {
-      let member = interaction.member
-      member.rol
-    }
-
-  }
+client.on('messageCreate', async(message) => {
+    if(message.content == '.tag') return message.reply(config.Tag)
 })
