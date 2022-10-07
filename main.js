@@ -1,4 +1,4 @@
-const { Client, Intents, Collection, MessageEmbed } = require("discord.js");
+const { Client, Intents, Collection, MessageEmbed, WebhookClient } = require("discord.js");
 const client = global.client = new Client({ 'intents': [32767]});
 
 const fs = require("fs");
