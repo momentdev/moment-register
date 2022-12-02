@@ -13,8 +13,11 @@ exports.execute = async (client, message, args) => {
   const member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
   if(!member) return message.reply(`\`Kullanım: .isim @moment Emirhan 18\``)
 
-  member.roles.add(config.Unregister)
-
+        await member.roles.add(config.Unregister)
+        await member.roles.remove(config.Kadinrolu1)
+        await member.roles.remove(config.Kadinrolu2)
+          await member.roles.remove(config.ErkekRolu1)
+        await member.roles.remove(config.Erkekrolu2)
   member.setNickname('Kayıtsız')
 
   const embed = new MessageEmbed()
