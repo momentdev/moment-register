@@ -50,7 +50,7 @@ exports.execute = async (client, message, args) => {
   const collector = await message.channel.createMessageComponentCollector({ filter: (clicker) => clicker.user.id === message.author.id, time: 30000 });
   collector.on("collect", async (data) => {
        if(data.customId === "erkek") {
-           
+        await member.roles.add(config.Unregister)
         await member.roles.add(config.ErkekRolu1)
         await member.roles.add(config.Erkekrolu2)
         const embed = new MessageEmbed()
@@ -69,7 +69,7 @@ exports.execute = async (client, message, args) => {
         });
       }
       if(data.customId === "kadin") {
-           
+                await member.roles.add(config.Unregister)
         await member.roles.add(config.Kadinrolu1)
         await member.roles.add(config.Kadinrolu2)
         const embed = new MessageEmbed()
